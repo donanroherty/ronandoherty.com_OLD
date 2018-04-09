@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import styled, { ThemeProvider, injectGlobal } from 'styled-components'
@@ -25,12 +24,7 @@ injectGlobal`
       color: ${theme.highlightColor};
       :hover {
         filter: brightness(120%);
-      }
-      :active {
-        /* outline:none; */
-        /* text-decoration: underline; */
-      }
-      
+      }   
   }
 }
 `
@@ -51,7 +45,7 @@ const Content = styled.div`
   padding-top: 0;
 `
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({ children, data }) => (
   <ThemeProvider theme={theme}>
     <div>
       <Helmet
@@ -64,7 +58,7 @@ const TemplateWrapper = ({ children }) => (
       <MainBody>
         <Header />
         <Content>{children()}</Content>
-        <Footer />
+        <Footer profileImage={data.profileImage} />
       </MainBody>
     </div>
   </ThemeProvider>
@@ -75,3 +69,14 @@ TemplateWrapper.propTypes = {
 }
 
 export default TemplateWrapper
+
+//Query profile image
+export const query = graphql`
+  query ProfileImageQuery {
+    profileImage: imageSharp(id: { regex: "/profile-image/" }) {
+      resolutions(width: 84) {
+        ...GatsbyImageSharpResolutions_withWebp_tracedSVG
+      }
+    }
+  }
+`
