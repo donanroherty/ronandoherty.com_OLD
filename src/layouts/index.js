@@ -7,11 +7,20 @@ import styled, { ThemeProvider, injectGlobal } from 'styled-components'
 
 const theme = {
   brandColor: '#619DD2',
-  highlightColor: '#FF6600',
-  mainColor: '#2A2A2A',
-  brandFont: 'dosis',
-  mainFont: 'roboto',
-  backgroundColor: 'lightgrey',
+  textPrimaryColor: '#2A2A2A',
+  textSecondaryColor: '#616161',
+  linkColor: '#FF6600',
+
+  fontPrimary: 'dosis',
+  fontSecondary: 'roboto',
+  backgroundColor: '#F8F8F8',
+
+  fontSizePostLink: '1.4rem',
+  fontSizeBrand: '1.6rem',
+  fontSizePrimary: '1rem',
+  fontSizeSecondary: '1rem',
+  fontSizeTitle1: '2rem',
+  fontSizeTitle2: '1.4rem',
 }
 
 injectGlobal`
@@ -21,33 +30,35 @@ injectGlobal`
   a {
       text-decoration: none;
       
-      color: ${theme.highlightColor};
+      color: ${theme.linkColor};
       :hover {
         filter: brightness(120%);
       }   
   }
 }
 `
+const Container = styled.div`
+  max-width: 100%;
+`
 const MainBody = styled.div`
-  min-height: 100%;
   display: grid;
   grid-gap: 20px;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
 
-  ${'' /* background-color: ${props => props.theme.backgroundColor}; */}
-  color: #${props => props.theme.mainColor};
-  font-family: ${props => props.theme.mainFont};
+  background-color: ${props => props.theme.backgroundColor};
+  color: #${props => props.theme.textPrimaryColor};
+  font-family: ${props => props.theme.fontSecondary};
 `
 const Content = styled.div`
-  margin: 0 auto;
-  padding: 0px 1.0875rem 1.45rem;
-  padding-top: 0;
+  ${'' /* margin: 0 auto; */}
+  ${'' /* padding: 0px 1.0875rem 1.45rem; */}
+  ${'' /* padding-top: 0; */}
 `
 
 const TemplateWrapper = ({ children, data }) => (
   <ThemeProvider theme={theme}>
-    <div>
+    <Container>
       <Helmet
         title="Gatsby Default Starter"
         meta={[
@@ -60,7 +71,7 @@ const TemplateWrapper = ({ children, data }) => (
         <Content>{children()}</Content>
         <Footer profileImage={data.profileImage} />
       </MainBody>
-    </div>
+    </Container>
   </ThemeProvider>
 )
 

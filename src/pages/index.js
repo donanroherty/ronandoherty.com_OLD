@@ -1,13 +1,18 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import styled from 'styled-components'
+import PostLink from '../components/PostLink'
 
+const Content = styled.div`
+  display: grid;
+  grid-gap: 2rem;
+`
 const IndexPage = () => (
-  <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-  </div>
+  <Content>
+    <PostLink />
+    <PostLink />
+    <PostLink />
+  </Content>
 )
 
 export default IndexPage
