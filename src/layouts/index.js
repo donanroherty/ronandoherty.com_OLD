@@ -25,8 +25,10 @@ const theme = {
 
 injectGlobal`
   html, body, #___gatsby,  #___gatsby>div {
-    height:100% !important;
-    margin: 0;
+    /* width: 100vw; */
+    min-height:100vh !important;
+    padding: 0;
+    margin:0;
   a {
       text-decoration: none;
       
@@ -38,24 +40,35 @@ injectGlobal`
 }
 `
 const Container = styled.div`
-  max-width: 100%;
-`
-const MainBody = styled.div`
-  display: grid;
-  grid-gap: 20px;
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns: 100%;
-
-  background-color: ${props => props.theme.backgroundColor};
-  color: #${props => props.theme.textPrimaryColor};
+  color: ${props => props.theme.textPrimaryColor};
   font-family: ${props => props.theme.fontSecondary};
+  margin: auto;
+  max-width: 960px;
 `
-const Content = styled.div`
-  ${'' /* margin: 0 auto; */}
-  ${'' /* padding: 0px 1.0875rem 1.45rem; */}
-  ${'' /* padding-top: 0; */}
+const Grid = styled.div`
+  display: grid;
+  grid-gap: 0.8rem;
+  grid-template-columns: repeat(12, [col] 1fr);
+  grid-template-rows: [header] auto [content] 1fr [footer] auto [end];
+  height: 100%;
+  padding: 1rem 0rem;
 `
+const Content = styled.div``
 
+const Line = styled.hr`
+  margin-bottom: 0.5rem;
+
+  border: 0;
+  height: 1px;
+  background: ${props => props.theme.brandColor};
+  background-image: linear-gradient(
+    to right,
+    #fff,
+    ${props => props.theme.brandColor},
+    ${props => props.theme.brandColor},
+    #fff
+  );
+`
 const TemplateWrapper = ({ children, data }) => (
   <ThemeProvider theme={theme}>
     <Container>
@@ -66,11 +79,29 @@ const TemplateWrapper = ({ children, data }) => (
           { name: 'keywords', content: 'sample, something' },
         ]}
       />
-      <MainBody>
-        <Header />
-        <Content>{children()}</Content>
-        <Footer profileImage={data.profileImage} />
-      </MainBody>
+
+      <Grid>
+        <div
+          style={{ gridColumn: 'col 2 / col 12', gridRow: 'header / content' }}
+        >
+          <Header />
+        </div>
+
+        <div
+          style={{ gridColumn: 'col 3 / col 11', gridRow: 'content / footer' }}
+        >
+          <Content>{children()}</Content>
+        </div>
+        <div style={{ gridColumn: 'col 2 / col 12', gridRow: 'footer / end' }}>
+          <Line
+            style={{
+              gridColumn: 'col 2 / col 12',
+              gridRow: 'header / content',
+            }}
+          />
+          <Footer profileImage={data.profileImage} />
+        </div>
+      </Grid>
     </Container>
   </ThemeProvider>
 )
@@ -85,7 +116,7 @@ export default TemplateWrapper
 export const query = graphql`
   query ProfileImageQuery {
     profileImage: imageSharp(id: { regex: "/profile-image/" }) {
-      resolutions(width: 84) {
+      resolutions(width: 64) {
         ...GatsbyImageSharpResolutions_withWebp_tracedSVG
       }
     }

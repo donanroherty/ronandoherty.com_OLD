@@ -11,7 +11,6 @@ const IndexPage = () => (
   <Content>
     <PostLink />
     <PostLink />
-    <PostLink />
   </Content>
 )
 

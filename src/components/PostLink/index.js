@@ -2,14 +2,10 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
-const Content = styled.div`
-  padding: 0rem 1rem;
-  display: grid;
-  grid-template-cols: 100%;
-`
+const Content = styled.div``
 const Banner = styled.div`
   min-width: 100%;
-  height: 100px;
+  height: 6rem;
   background-color: lightgray;
 `
 const Title = styled.div`
@@ -24,7 +20,7 @@ const PostLink = () => (
   <div>
     <Content>
       <Banner />
-      <Link>
+      <Link to="/">
         <Title>Post Title</Title>
       </Link>
       <Description>
