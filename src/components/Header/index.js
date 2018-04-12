@@ -5,6 +5,8 @@ import infoIcon from '../../icons/info.svg'
 import githubIcon from '../../icons/github.svg'
 import linkedinIcon from '../../icons/linkedin.svg'
 import searchIcon from '../../icons/search.svg'
+import { Line } from '../Utils/line'
+import { Heading1, Heading4 } from '../Utils/text-styles'
 
 const Content = styled.div`
   ${'' /* display: grid; */}
@@ -14,19 +16,11 @@ const Content = styled.div`
   ${'' /* padding: 2rem 0.5rem 0rem 0.5rem; */}
   width: 100%;
 `
-const BrandTitle = styled.div`
-  font-family: ${props => props.theme.fontPrimary};
-  font-size: ${props => props.theme.fontSizeBrand};
+const Title = Heading1.extend`
   text-align: center;
-  color: ${props => props.theme.brandColor} !important;
-  ${'' /* line-height: 1.2rem; */};
 `
-const BrandSubtitle = styled.div`
-  font-family: ${props => props.theme.fontPrimary};
-  font-size: ${props => props.theme.fontSizeSecondary};
+const Subtitle = Heading4.extend`
   text-align: center;
-  color: ${props => props.theme.textPrimaryColor};
-  filter: brightness(180%);
 `
 const BrandLink = styled(Link)`
   text-decoration: none;
@@ -35,10 +29,10 @@ const BrandLink = styled(Link)`
     color: ${props => props.theme.linkColor} !important;
   }
   &:visited {
-    color: ${props => props.theme.brandColor} !important;
+    color: ${props => props.theme.color1} !important;
   }
   &:active {
-    color: ${props => props.theme.brandColor} !important;
+    color: ${props => props.theme.color1} !important;
   }
 `
 const SearchIconContainer = styled.div`
@@ -53,30 +47,17 @@ const SearchIcon = styled.svg`
   width: 20px;
   height: 20px;
   fill: ${props => props.theme.linkColor} !important;
-  ${'' /* position: relative !important; */} top: -10px;
-`
-const Line = styled.hr`
-  margin-bottom: 0;
-  border: 0;
-  height: 1px;
-  background: ${props => props.theme.brandColor};
-  background-image: linear-gradient(
-    to right,
-    #fff,
-    ${props => props.theme.brandColor},
-    ${props => props.theme.brandColor},
-    #fff
-  );
 `
 
 const Header = () => {
   return (
     <div>
       <Content>
-        <BrandTitle>
-          <BrandLink to="/">Ronan Doherty</BrandLink>
-        </BrandTitle>
-        <BrandSubtitle>web and game developer</BrandSubtitle>
+        <Title>
+          {/* <BrandLink to="/">Ronan Doherty</BrandLink> */}
+          Ronan Doherty
+        </Title>
+        <Subtitle>web and game developer</Subtitle>
 
         <SearchIconContainer>
           <Line />

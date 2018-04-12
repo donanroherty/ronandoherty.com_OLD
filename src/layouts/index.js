@@ -5,69 +5,77 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import styled, { ThemeProvider, injectGlobal } from 'styled-components'
 
-const theme = {
-  brandColor: '#619DD2',
-  textPrimaryColor: '#2A2A2A',
-  textSecondaryColor: '#616161',
-  linkColor: '#FF6600',
-
-  fontPrimary: 'dosis',
-  fontSecondary: 'roboto',
+export const theme = {
+  // colors
+  color: '#2A2A2A',
+  color1: '#619DD2',
+  color2: '#FF6600',
+  color3: '#616161',
   backgroundColor: '#F8F8F8',
 
-  fontSizePostLink: '1.4rem',
-  fontSizeBrand: '1.6rem',
-  fontSizePrimary: '1rem',
-  fontSizeSecondary: '1rem',
-  fontSizeTitle1: '2rem',
-  fontSizeTitle2: '1.4rem',
+  // fonts
+  font: 'roboto',
+  specialFont: 'dosis',
+  h1Font: 'dosis',
+  h2Font: 'dosis',
+  h3Font: 'dosis',
+  h4Font: 'dosis',
+
+  // font sizes
+  h1Size: '2rem',
+  h2Size: '1.4rem',
+  h3Size: '1.2rem',
+  h4Size: '1rem',
+  fontSize: '1rem',
+
+  // grid
+  gridGap: '0.8rem',
 }
 
 injectGlobal`
   html, body, #___gatsby,  #___gatsby>div {
-    /* width: 100vw; */
-    min-height:100vh !important;
+    height:100vh;
+    width: 100vw;
     padding: 0;
     margin:0;
   a {
       text-decoration: none;
-      
-      color: ${theme.linkColor};
+      color: ${theme.color2};
       :hover {
         filter: brightness(120%);
       }   
   }
+
 }
 `
 const Container = styled.div`
-  color: ${props => props.theme.textPrimaryColor};
-  font-family: ${props => props.theme.fontSecondary};
   margin: auto;
-  max-width: 960px;
+  width: 960px;
+  height: 100%;
+  color: ${props => props.theme.color};
+  font-size: ${props => props.theme.fontSize};
+  font-family: ${props => props.theme.font};
 `
 const Grid = styled.div`
   display: grid;
-  grid-gap: 0.8rem;
+  min-height: 100%;
+  grid-gap: ${props => props.theme.gridGap};
   grid-template-columns: repeat(12, [col] 1fr);
-  grid-template-rows: [header] auto [content] 1fr [footer] auto [end];
-  height: 100%;
-  padding: 1rem 0rem;
+  grid-template-rows: [row] auto [row] 1fr [row] auto [row];
+  margin: auto;
+  ${'' /* height: 100vh; */};
 `
-const Content = styled.div``
-
-const Line = styled.hr`
-  margin-bottom: 0.5rem;
-
-  border: 0;
-  height: 1px;
-  background: ${props => props.theme.brandColor};
-  background-image: linear-gradient(
-    to right,
-    #fff,
-    ${props => props.theme.brandColor},
-    ${props => props.theme.brandColor},
-    #fff
-  );
+const HeaderWrapper = styled.div`
+  grid-column: col 2 / col 12;
+  grid-row: row 1 / row 2;
+`
+const ContentWrapper = styled.div`
+  grid-column: col 3 / col 11;
+  grid-row: row 2 / row 3;
+`
+const FooterWrapper = styled.div`
+  grid-column: col 2 / col 12;
+  grid-row: row 3 / row 4;
 `
 const TemplateWrapper = ({ children, data }) => (
   <ThemeProvider theme={theme}>
@@ -81,26 +89,13 @@ const TemplateWrapper = ({ children, data }) => (
       />
 
       <Grid>
-        <div
-          style={{ gridColumn: 'col 2 / col 12', gridRow: 'header / content' }}
-        >
+        <HeaderWrapper>
           <Header />
-        </div>
-
-        <div
-          style={{ gridColumn: 'col 3 / col 11', gridRow: 'content / footer' }}
-        >
-          <Content>{children()}</Content>
-        </div>
-        <div style={{ gridColumn: 'col 2 / col 12', gridRow: 'footer / end' }}>
-          <Line
-            style={{
-              gridColumn: 'col 2 / col 12',
-              gridRow: 'header / content',
-            }}
-          />
+        </HeaderWrapper>
+        <ContentWrapper>{children()}</ContentWrapper>
+        <FooterWrapper>
           <Footer profileImage={data.profileImage} />
-        </div>
+        </FooterWrapper>
       </Grid>
     </Container>
   </ThemeProvider>
@@ -114,7 +109,7 @@ export default TemplateWrapper
 
 //Query profile image
 export const query = graphql`
-  query ProfileImageQuery {
+  query FooterImageQuery {
     profileImage: imageSharp(id: { regex: "/profile-image/" }) {
       resolutions(width: 64) {
         ...GatsbyImageSharpResolutions_withWebp_tracedSVG
