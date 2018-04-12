@@ -1,12 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
-import infoIcon from '../../icons/info.svg'
-import githubIcon from '../../icons/github.svg'
-import linkedinIcon from '../../icons/linkedin.svg'
-import searchIcon from '../../icons/search.svg'
-import { Line } from '../Utils/line'
-import { Heading1, Heading4 } from '../Utils/text-styles'
+import { H1, H4, A } from '../Utils/text-styles'
+import { Line } from '../Utils/common-elements'
 
 const Content = styled.div`
   ${'' /* display: grid; */}
@@ -16,10 +12,10 @@ const Content = styled.div`
   ${'' /* padding: 2rem 0.5rem 0rem 0.5rem; */}
   width: 100%;
 `
-const Title = Heading1.extend`
+const Title = H1.extend`
   text-align: center;
 `
-const Subtitle = Heading4.extend`
+const Subtitle = H4.extend`
   text-align: center;
 `
 const BrandLink = styled(Link)`
@@ -35,40 +31,17 @@ const BrandLink = styled(Link)`
     color: ${props => props.theme.color1} !important;
   }
 `
-const SearchIconContainer = styled.div`
-  text-align: center;
-  width: 100%;
-  height: 50px;
-  padding-top: 0.2rem;
-  ${'' /* position: relative; */};
-`
-const SearchIcon = styled.svg`
-  padding-top: 0.6rem;
-  width: 20px;
-  height: 20px;
-  fill: ${props => props.theme.linkColor} !important;
-`
 
 const Header = () => {
   return (
-    <div>
-      <Content>
-        <Title>
-          {/* <BrandLink to="/">Ronan Doherty</BrandLink> */}
-          Ronan Doherty
-        </Title>
-        <Subtitle>web and game developer</Subtitle>
-
-        <SearchIconContainer>
-          <Line />
-          {/* <Link to="/"> */}
-          <SearchIcon>
-            <use xlinkHref={`#${searchIcon.id}`} alt="search button" />
-          </SearchIcon>
-          {/* </Link> */}
-        </SearchIconContainer>
-      </Content>
-    </div>
+    <Content>
+      <Title>
+        {/* <BrandLink to="/">Ronan Doherty</BrandLink> */}
+        Ronan Doherty
+      </Title>
+      <Subtitle>web and game developer</Subtitle>
+      <Line />
+    </Content>
   )
 }
 

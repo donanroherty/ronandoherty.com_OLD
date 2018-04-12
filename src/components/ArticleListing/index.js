@@ -1,7 +1,6 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import styled from 'styled-components'
-import { Heading2, Heading4 } from '../Utils/text-styles'
+import { H2, H4, Link } from '../Utils/text-styles'
 
 const Content = styled.div``
 const Banner = styled.div`
@@ -9,19 +8,20 @@ const Banner = styled.div`
   height: 6rem;
   background-color: lightgray;
 `
-const Title = Heading2.extend`
+const Title = H2.extend`
   line-height: 0.2rem;
 `
 const Description = styled.div`
   font-size: ${props => props.theme.fontSize};
 `
-const PostLink = () => (
+
+const ArticleListing = () => (
   <Content>
     <Banner />
     <Link to="/article">
       <Title>Post Title</Title>
-      <Heading4>27 October 1983</Heading4>
     </Link>
+    <H4>27 October 1983</H4>
     <Description>
       Zombie ipsum reversus ab viral inferno. Summus brains sit​​. Zombie ipsum
       reversus ab viral inferno. Summus brains sit​​.
@@ -29,4 +29,4 @@ const PostLink = () => (
   </Content>
 )
 
-export default PostLink
+export default ArticleListing

@@ -1,9 +1,9 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
-import PostLink from '../components/PostLink'
+import ArticleListing from '../components/ArticleListing'
 import Img from 'gatsby-image'
-import { Heading2, Heading3, Heading4 } from '../Components/Utils/text-styles'
+import { H2, H3, H4 } from '../components/Utils/text-styles'
 
 const Container = styled.div`
   font-family: ${props => props.theme.fontSecondary};
@@ -19,12 +19,12 @@ const Grid = styled.div`
   height: 100%;
 `
 
-const Title = Heading2.extend`
+const Title = H2.extend`
   line-height: 1.8rem;
   padding: 0;
   margin: 0;
 `
-const Date = Heading4.extend`
+const Date = H4.extend`
   line-height: 2rem;
   margin: 0;
 `
@@ -63,7 +63,7 @@ const Article = (props, data) => (
           mauris. Hi mindless mortuis soulless creaturas, imo evil stalking
           monstra adventus resi dentevil vultus comedat cerebella viventium.{' '}
         </p>
-        <Heading3>Section 1</Heading3>
+        <H3>Section 1</H3>
         <p>
           Qui animated corpse, cricket bat max brucks terribilem incessu zomby.
           The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem

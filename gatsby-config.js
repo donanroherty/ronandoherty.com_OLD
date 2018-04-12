@@ -18,13 +18,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `icons`,
-        path: `${__dirname}/src/icons`,
-      },
-    },
     `gatsby-plugin-svg-sprite`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

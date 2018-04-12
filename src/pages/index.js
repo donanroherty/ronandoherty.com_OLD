@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
-import PostLink from '../components/PostLink'
+import ArticleListing from '../components/ArticleListing'
 
 const Content = styled.div`
   display: grid;
@@ -9,9 +9,9 @@ const Content = styled.div`
 `
 const IndexPage = () => (
   <Content>
-    <PostLink />
-    <PostLink />
-    <PostLink />
+    <ArticleListing />
+    <ArticleListing />
+    <ArticleListing />
   </Content>
 )
 

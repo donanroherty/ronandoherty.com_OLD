@@ -1,10 +1,10 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import githubIcon from '../../icons/github.svg'
 import linkedinIcon from '../../icons/linkedin.svg'
-import { Line } from '../Utils/line'
+import { Icon, Line } from '../Utils/common-elements'
+import { Link } from '../Utils/text-styles'
 
 const Content = styled.div`
   margin: auto;
@@ -19,12 +19,6 @@ const ProfileImg = styled(Img)`
 const ProfileText = styled.div`
   font-family: ${props => props.theme.quoteFont};
   color: ${props => props.theme.color3};
-`
-const SocialIcon = styled.svg`
-  width: 30px;
-  height: 30px;
-  fill: ${props => props.theme.linkColor} !important;
-  ${'' /* padding: 0.3rem 0rem; */};
 `
 
 const Footer = props => (
@@ -49,11 +43,11 @@ const Footer = props => (
       </div>
     </ProfileText>
     <div>
-      <div>
+      {/* <div>
         <Link to="/">
-          <SocialIcon>
+          <Icon>
             <use xlinkHref={`#${githubIcon.id}`} alt="github button" />
-          </SocialIcon>
+          </Icon>
         </Link>
       </div>
       <div>
@@ -62,7 +56,7 @@ const Footer = props => (
             <use xlinkHref={`#${linkedinIcon.id}`} alt="linkedin button" />
           </SocialIcon>
         </Link>
-      </div>
+      </div> */}
     </div>
   </Content>
 )
