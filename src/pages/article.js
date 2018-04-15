@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 import ArticleListing from '../components/ArticleListing'
 import Img from 'gatsby-image'
-import { H2, H3, H4 } from '../components/Utils/text-styles'
+import { H1, H2, H4 } from '../components/Utils/text-styles'
 
 const Container = styled.div`
   font-family: ${props => props.theme.fontSecondary};
@@ -18,8 +18,7 @@ const Grid = styled.div`
   grid-template-columns: repeat(8, [col] 1fr);
   height: 100%;
 `
-
-const Title = H2.extend`
+const Title = H1.extend`
   line-height: 1.8rem;
   padding: 0;
   margin: 0;
@@ -28,7 +27,6 @@ const Date = H4.extend`
   line-height: 2rem;
   margin: 0;
 `
-
 const BannerWrapper = styled.div`
   grid-column: col 1 / col 9;
 `
@@ -63,7 +61,7 @@ const Article = (props, data) => (
           mauris. Hi mindless mortuis soulless creaturas, imo evil stalking
           monstra adventus resi dentevil vultus comedat cerebella viventium.{' '}
         </p>
-        <H3>Section 1</H3>
+        <H2>Section 1</H2>
         <p>
           Qui animated corpse, cricket bat max brucks terribilem incessu zomby.
           The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem

@@ -1,24 +1,18 @@
 import React, { Component } from 'react'
-import { Icon } from '../Utils/common-elements'
 import { Link } from '../Utils/text-styles'
-
+import Icon from '../Utils/icon'
 import styled from 'styled-components'
 
 const Container = styled.div`
   line-height: 0;
   text-align: center;
 `
-
-class SearchBar extends Component {
-  render() {
-    return (
-      <Container>
-        <Link to="/">
-          <Icon icon={require('../../icons/search.svg')} />
-        </Link>
-      </Container>
-    )
-  }
-}
+const SearchBar = props => (
+  <Container>
+    <Link to="/" type="icon">
+      <Icon icon="search" />
+    </Link>
+  </Container>
+)
 
 export default SearchBar

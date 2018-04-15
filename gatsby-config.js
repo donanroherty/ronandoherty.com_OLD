@@ -1,14 +1,28 @@
 module.exports = {
   siteMetadata: {
-    title: 'Ronan Doherty Blog',
+    title: `Ronan Doherty`,
+    tagline: `web and game developer`,
+    welcomeMessage: `Hi, I'm Ronan. I build apps and games in Ireland. Thanks for visiting!`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-resolve-src`,
+    `gatsby-transformer-remark`,
     {
-      resolve: 'gatsby-plugin-google-fonts',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        fonts: ['roboto', 'dosis'],
+        path: `${__dirname}/articles/`,
+        name: 'markdown-pages',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/`,
+        name: 'src',
       },
     },
     {
@@ -18,8 +32,18 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-plugin-svg-sprite`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `icons`,
+        path: `${__dirname}/src/icons`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: ['roboto', 'dosis'],
+      },
+    },
   ],
 }

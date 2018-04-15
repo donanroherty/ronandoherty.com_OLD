@@ -22,7 +22,7 @@ const Container = styled.div`
   height: 100%;
   color: ${props => props.theme.color};
   font-size: ${props => props.theme.fontSize};
-  font-family: ${props => props.theme.font};
+  font-family: ${props => props.theme.fontPrimary};
 `
 const Grid = styled.div`
   display: grid;
@@ -53,22 +53,28 @@ const TemplateWrapper = ({ children, data }) => (
   <ThemeProvider theme={theme}>
     <Container>
       <Helmet
-        title="Gatsby Default Starter"
+        title={data.site.siteMetadata.title}
         meta={[
           { name: 'description', content: 'Sample' },
           { name: 'keywords', content: 'sample, something' },
         ]}
       />
       <Grid>
+        <HeaderWrapper>
+          <Header
+            title={data.site.siteMetadata.title}
+            tagline={data.site.siteMetadata.tagline}
+          />
+        </HeaderWrapper>
         <SearchWrapper>
           <SearchBar />
         </SearchWrapper>
-        <HeaderWrapper>
-          <Header />
-        </HeaderWrapper>
         <ContentWrapper>{children()}</ContentWrapper>
         <FooterWrapper>
-          <Footer profileImage={data.profileImage} />
+          <Footer
+            profileImage={data.profileImage}
+            welcomeMessage={data.site.siteMetadata.welcomeMessage}
+          />
         </FooterWrapper>
       </Grid>
     </Container>
@@ -81,17 +87,19 @@ TemplateWrapper.propTypes = {
 
 export default TemplateWrapper
 
-//Query profile image
+//Query
 export const query = graphql`
-  query FooterImageQuery {
+  query ImageQuery {
     profileImage: imageSharp(id: { regex: "/profile-image/" }) {
       resolutions(width: 64) {
         ...GatsbyImageSharpResolutions_withWebp_tracedSVG
       }
     }
-    icon: imageSharp(id: { regex: "/github/" }) {
-      resolutions(width: 64) {
-        ...GatsbyImageSharpResolutions_withWebp_tracedSVG
+    site {
+      siteMetadata {
+        title
+        tagline
+        welcomeMessage
       }
     }
   }

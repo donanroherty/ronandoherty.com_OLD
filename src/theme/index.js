@@ -5,16 +5,14 @@ export default {
   color2: '#FF6600',
   color3: '#616161',
   backgroundColor: '#F8F8F8',
+  warning: 'red',
 
   // fonts
-  font: 'roboto',
-  specialFont: 'dosis',
-  h1Font: 'dosis',
-  h2Font: 'dosis',
-  h3Font: 'dosis',
-  h4Font: 'dosis',
+  fontBrand: 'dosis',
+  fontPrimary: 'roboto',
 
   // font sizes
+  brandSize: '2.3rem',
   h1Size: '2rem',
   h2Size: '1.4rem',
   h3Size: '1.2rem',

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { H2, H4, Link } from '../Utils/text-styles'
 
-const Content = styled.div``
+const Container = styled.div``
 const Banner = styled.div`
   min-width: 100%;
   height: 6rem;
@@ -16,7 +16,7 @@ const Description = styled.div`
 `
 
 const ArticleListing = () => (
-  <Content>
+  <Container>
     <Banner />
     <Link to="/article">
       <Title>Post Title</Title>
@@ -26,7 +26,7 @@ const ArticleListing = () => (
       Zombie ipsum reversus ab viral inferno. Summus brains sit​​. Zombie ipsum
       reversus ab viral inferno. Summus brains sit​​.
     </Description>
-  </Content>
+  </Container>
 )
 
 export default ArticleListing
