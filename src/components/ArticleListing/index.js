@@ -15,17 +15,14 @@ const Description = styled.div`
   font-size: ${props => props.theme.fontSize};
 `
 
-const ArticleListing = () => (
+const ArticleListing = props => (
   <Container>
     <Banner />
     <Link to="/article">
-      <Title>Post Title</Title>
+      <Title>{props.articleData.title}</Title>
     </Link>
-    <H4>27 October 1983</H4>
-    <Description>
-      Zombie ipsum reversus ab viral inferno. Summus brains sit​​. Zombie ipsum
-      reversus ab viral inferno. Summus brains sit​​.
-    </Description>
+    <H4>{props.articleData.date}</H4>
+    <Description>{props.articleData.excerpt}</Description>
   </Container>
 )
 

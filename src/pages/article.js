@@ -37,7 +37,7 @@ const ContentWrapper = styled.div`
   grid-column: col / col 9;
 `
 
-const Article = (props, data) => (
+const Article = props => (
   <Container>
     <Grid>
       <BannerWrapper>
@@ -49,7 +49,7 @@ const Article = (props, data) => (
       </BannerWrapper>
 
       <TitleWrapper>
-        <Title>Post title is long and boring</Title>
+        <Title>{props.title}</Title>
         <Date>27 October 1983</Date>
       </TitleWrapper>
 
@@ -84,3 +84,8 @@ export const query = graphql`
     }
   }
 `
+// markdownRemark(id: {eq: ${this.props.articleId}}) {
+//   frontmatter {
+//     title
+//   }
+// }

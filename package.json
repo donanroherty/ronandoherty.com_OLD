@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "ronan-doherty-blog",
   "description": "Gatsby default starter",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Ronan Doherty <donanroherty@gmail.com>",
   "dependencies": {
     "gatsby": "^1.9.241",
     "gatsby-image": "^1.0.43",
@@ -19,9 +19,7 @@
     "react-helmet": "^5.2.0",
     "styled-components": "^3.2.5"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",

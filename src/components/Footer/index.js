@@ -22,16 +22,15 @@ const ProfileText = styled.div`
 
 const Footer = props => (
   <Content>
-    {/* <ProfileImg
-        title="Profile Image"
-        alt="Profile Image"
-        resolutions={props.profileImage.resolutions}
-      /> */}
+    {/*<ProfileImg
+      title="Profile Image"
+      alt="Profile Image"
+      resolutions={props.profileImage.resolutions}
+    />*/}
     <Line />
-
     <ProfileText>
       <div>
-        {props.welcomeMessage}
+        {props.siteMetadata.welcomeMessage}
         <br />
         <Link to="/">more...</Link>
       </div>

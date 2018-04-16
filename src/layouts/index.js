@@ -62,8 +62,8 @@ const TemplateWrapper = ({ children, data }) => (
       <Grid>
         <HeaderWrapper>
           <Header
-            title={data.site.siteMetadata.title}
-            tagline={data.site.siteMetadata.tagline}
+            siteMetadata={data.site.siteMetadata}
+            headerData={data.headerData}
           />
         </HeaderWrapper>
         <SearchWrapper>
@@ -72,8 +72,8 @@ const TemplateWrapper = ({ children, data }) => (
         <ContentWrapper>{children()}</ContentWrapper>
         <FooterWrapper>
           <Footer
+            siteMetadata={data.site.siteMetadata}
             profileImage={data.profileImage}
-            welcomeMessage={data.site.siteMetadata.welcomeMessage}
           />
         </FooterWrapper>
       </Grid>

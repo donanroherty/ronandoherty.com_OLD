@@ -12,9 +12,9 @@ const Header = props => {
   return (
     <Content>
       <Link to="/">
-        <Brand>{props.title}</Brand>
+        <Brand>{props.siteMetadata.title}</Brand>
       </Link>
-      <H4>{`${props.tagline}`}</H4>
+      <H4>{`${props.siteMetadata.tagline}`}</H4>
       <Line />
     </Content>
   )
