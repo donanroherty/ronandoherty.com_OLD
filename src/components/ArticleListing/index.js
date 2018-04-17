@@ -1,4 +1,5 @@
 import React from 'react'
+import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { H2, H4, Link } from '../Utils/text-styles'
 
@@ -17,8 +18,8 @@ const Description = styled.div`
 
 const ArticleListing = props => (
   <Container>
-    <Banner />
-    <Link to="/article">
+    <Img alt="Thumbnail Image" sizes={props.articleData.thumbnail} />
+    <Link to={props.articleData.slug}>
       <Title>{props.articleData.title}</Title>
     </Link>
     <H4>{props.articleData.date}</H4>

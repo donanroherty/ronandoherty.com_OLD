@@ -2,7 +2,7 @@
 path: "/articles/my-second-article"
 date: "2018-04-16"
 title: "My second blog post"
-banner: "/img/banner-temp.png"
+thumbnail: "./banner-temp.png"
 ---
 
 ## Introduction

@@ -1,7 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import github from '../../icons/github.svg'
-import linkedin from '../../icons/linkedin.svg'
 
 // Horizontal Line
 export const Line = styled.hr`

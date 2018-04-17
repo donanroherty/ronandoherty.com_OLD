@@ -21,7 +21,10 @@ const IndexPage = props => {
             title: node.frontmatter.title,
             date: node.frontmatter.date,
             excerpt: node.excerpt,
+            slug: node.fields.slug,
+            thumbnail: node.frontmatter.thumbnail.childImageSharp.sizes,
           }}
+          key={node.id}
         />
       ))}
     </Content>
@@ -40,7 +43,16 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
-            banner
+            thumbnail {
+              childImageSharp {
+                sizes(maxWidth: 690) {
+                  ...GatsbyImageSharpSizes_withWebp_tracedSVG
+                }
+              }
+            }
+          }
+          fields {
+            slug
           }
           excerpt
         }

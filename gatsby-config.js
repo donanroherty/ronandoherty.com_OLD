@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Ronan Doherty`,
-    tagline: `web and game developer`,
-    welcomeMessage: `Hi, I'm Ronan. I build apps and games in Ireland. Thanks for visiting!`,
+    title: `Brand Identity`,
+    tagline: `brand tagline`,
+    welcomeMessage: `This is a simple blog template built in Gatsby.`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -11,11 +11,12 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-resolve-src`,
     `gatsby-transformer-remark`,
+    `gatsby-plugin-remove-trailing-slashes`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/articles/`,
-        name: 'articles',
+        path: `${__dirname}/content/`,
+        name: 'content',
       },
     },
     {
@@ -30,13 +31,6 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `icons`,
-        path: `${__dirname}/src/icons`,
       },
     },
     {
