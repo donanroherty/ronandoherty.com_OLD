@@ -1,8 +1,7 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-import { H1, H2, H4 } from '../components/Utils/text-styles'
+import { H1, H2, H4, Link } from '../components/Utils/text-styles'
 
 const Container = styled.div`
   font-family: ${props => props.theme.fontSecondary};
@@ -32,21 +31,25 @@ const BannerWrapper = styled.div`
 const TitleWrapper = styled.div`
   grid-column: col 1 / col 9;
 `
+// const ToCWrapper = styled.div`
+//   grid-column: col / col 9;
+// `
 const ContentWrapper = styled.div`
   grid-column: col / col 9;
 `
 
 const Article = props => {
   const post = props.data.markdownRemark
+
   return (
     <Container>
       <Grid>
-        <BannerWrapper>
+        {/*<BannerWrapper>
           <Img
             alt="Banner Image"
             sizes={post.frontmatter.thumbnail.childImageSharp.sizes}
           />
-        </BannerWrapper>
+        </BannerWrapper>*/}
 
         <TitleWrapper>
           <Title>{post.frontmatter.title}</Title>
@@ -67,6 +70,11 @@ export const query = graphql`
   query ArticleQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      tableOfContents
+      headings {
+        value
+        depth
+      }
       frontmatter {
         title
         date(formatString: "DD MMMM, YYYY")

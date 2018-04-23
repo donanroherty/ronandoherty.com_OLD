@@ -5,17 +5,31 @@ module.exports = {
     welcomeMessage: `This is a simple blog template built in Gatsby.`,
   },
   plugins: [
+    // `gatsby-plugin-remove-trailing-slashes`,
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-resolve-src`,
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-remove-trailing-slashes`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 960,
+              sizeByPixelDensity: true,
+            },
+          },
+        ],
+      },
+    },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/`,
+        path: `${__dirname}/content/articles`,
         name: 'content',
       },
     },
