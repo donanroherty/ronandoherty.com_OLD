@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Brand Identity`,
-    tagline: `brand tagline`,
+    title: `Ronan Doherty`,
+    tagline: `web and game dev`,
     welcomeMessage: `This is a simple blog template built in Gatsby.`,
   },
   plugins: [
@@ -50,7 +50,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
-        fonts: ['roboto', 'dosis'],
+        fonts: ['roboto', 'dosis', 'rubik', 'bungee'],
       },
     },
   ],

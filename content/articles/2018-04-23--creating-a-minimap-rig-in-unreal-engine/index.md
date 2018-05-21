@@ -1,8 +1,10 @@
 ---
 path: "/tutorials/creating-a-minimap-rig-in-unreal-engine"
 date: "2018-04-23"
-title: "Creating a minimap rig in Unreal Engine"
-thumbnail: "./banner.png"
+title: "Unreal Engine minimap rig"
+description: "A short guide to creating a reusable camera rig for capturing minimaps"
+thumbnail: "./thumbnail.png"
+banner: "./banner.png"
 ---
 
 ## Introduction
@@ -16,7 +18,7 @@ The solution we're going to try expand on here is the texture based approach. Wh
 
 ### Project setup
 
-Lets start by creating a new Blueprint project based on the Third Persoin template. Name it whatever you want, we wont be needing starter content for this tutorial. In the content browser create a new folder at root called **"Blueprints"**.
+Lets start by creating a new Blueprint project based on the Third Person template. Name it whatever you want, we wont be needing starter content for this tutorial. In the content browser create a new folder at root called **"Blueprints"**.
 
 ![Create project](./create-project.jpg)
 
