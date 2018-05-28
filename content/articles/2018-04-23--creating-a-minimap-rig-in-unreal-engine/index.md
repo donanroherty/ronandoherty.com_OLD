@@ -7,7 +7,7 @@ thumbnail: "./thumbnail.png"
 banner: "./banner.png"
 ---
 
-## Introduction
+# Introduction
 
 Mini-maps are a necessity for a lot of games and there's some cool solutions already available for Unreal Engine. Generally there are two approaches.
 
@@ -16,7 +16,7 @@ Mini-maps are a necessity for a lot of games and there's some cool solutions alr
 
 The solution we're going to try expand on here is the texture based approach. What I want to focus on here is usability and quick iteration for designers. We'll be creating a rig to automate the process of capturing a game level as a static image and feeding it back into a UMG minimap widget which accounts for the offset of the camera rig position when that position isn't necessarily at world origin.
 
-### Project setup
+## Project setup
 
 Lets start by creating a new Blueprint project based on the Third Person template. Name it whatever you want, we wont be needing starter content for this tutorial. In the content browser create a new folder at root called **"Blueprints"**.
 
@@ -39,7 +39,7 @@ Add a new a **Camera** component. In the cameras details panel set the _Rotation
 
 ![Create initial components](./create-initial-components.jpg)
 
-### Set up control variables
+## Set up control variables
 
 We want to make capturing out map to an image as simple as possible so we'll have two primary variables to control the image capture.
 
@@ -58,7 +58,7 @@ Connect these function calls to the _Construction Script_ event through a sequen
 
 Now would be a good time to add our rig to the level. Drag **MapCaptureRig** from the content browser into the level, keep it close to the center of the level geometry. With the actor selected in the level you should see your exposed **FOV** and **MapSize** variables exposed in the actors details panel. Have a play around, you should see the **MapBoundsVisual** component resizing.
 
-### Getting the camera position
+## Getting the camera position
 
 Now for the fun part. We're going to set the camera position to perfectly frame the MapBoundsVisual box component. As our camera is always above the level looking directly down so we can simplify this process by working with the camera as if it's a 2D triangle when viewed from the left viewport. To make more sense of this set your viewport to _Left_, then in the viewport click _Show->Advanced->Camera Frustums_.
 
