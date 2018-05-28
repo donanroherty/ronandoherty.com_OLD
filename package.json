@@ -13,12 +13,15 @@
     "gatsby-plugin-sharp": "^1.6.43",
     "gatsby-plugin-styled-components": "^2.0.11",
     "gatsby-plugin-svg-sprite": "^1.0.0",
+    "gatsby-plugin-typography": "^1.7.18",
     "gatsby-remark-images": "^1.5.62",
     "gatsby-source-filesystem": "^1.5.29",
     "gatsby-transformer-remark": "^1.7.40",
     "gatsby-transformer-sharp": "^1.6.22",
     "react-helmet": "^5.2.0",
-    "styled-components": "^3.2.5"
+    "styled-components": "^3.2.5",
+    "typography": "^0.16.17",
+    "typography-theme-funston": "^0.15.10"
   },
   "keywords": [
     "gatsby"

@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-import { Line } from '../Utils/common-elements'
-import Icon from '../Utils/icon'
-import { Link } from '../Utils/text-styles'
+import { Line } from '../utils/common-elements'
+import Icon from '../utils/icon'
+import { Link } from '../utils/text-styles'
 
 const Content = styled.div`
   margin: auto;

@@ -10,7 +10,7 @@ export default {
 
   // fonts
   fontBrand : 'bungee',
-  fontPrimary : 'roboto',
+  fontPrimary : 'dosis',
   fontSecondary : 'dosis',
 
   // font sizes
@@ -19,9 +19,6 @@ export default {
   h1Size : '2rem',
   h2Size : '1.5rem',
   h3Size : '1rem',
-  h4Size : '.9rem',
-  fontSize : '1rem',
-
-  // grid
-  gridGap : '0.8rem'
+  h4Size : '.8rem',
+  fontSize : '1rem'
 }

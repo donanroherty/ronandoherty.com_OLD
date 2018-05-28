@@ -1,43 +1,32 @@
 import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-import {H1, H2, H4, Link} from '../components/Utils/text-styles'
+import { H1, H2, H3, H4, Link } from '../components/utils/text-styles'
+import { Image } from '../components/utils/common-elements'
 
-const Container = styled.div `
-  font-family: ${props => props.theme.fontSecondary};
-  margin: auto;
-  max-width: 960px;
-  height: 100%;
+const Container = styled.div`
+  font-family: ${props => props.theme.fontPrimary};
+  ${'' /* margin: 0 auto; */} width: 100%;
+
   display: subgrid;
- background-color: ${props => props.theme.colorLightText}; 
-  color: ${props => props.theme.color};
-  padding: 20px;
+  background-color: ${props => props.theme.colorLightText};
+  ${'' /* color: ${props => props.theme.color}; */} ${'' /* padding: 2rem; */}
   border-radius: 3px;
 `
-const Grid = styled.div `
-  display: grid;
-  grid-gap: ${props => props.theme.gridGap};
-  grid-template-columns: repeat(8, [col] 1fr);
-  height: 100%;
-`
-const Title = H1.extend `
-  line-height: 1.8rem;
+const Title = H1.extend`
   padding: 0;
   margin: 0;
+  color: ${props => props.theme.color};
 `
-const Date = H4.extend `
+const Date = H4.extend`
   line-height: 2rem;
   margin: 0;
 `
-const BannerWrapper = styled.div `
-  grid-column: col 1 / col 9;
+const BannerWrapper = styled.div`
+  padding: 1rem;
 `
-const TitleWrapper = styled.div `
-  grid-column: col 1 / col 9;
-`
-
-const ContentWrapper = styled.div `
-  grid-column: col / col 9;
+const ContentWrapper = styled.div`
+  padding: 3rem;
 `
 
 const Article = props => {
@@ -45,29 +34,31 @@ const Article = props => {
 
   return (
     <Container>
-      <Grid>
+      {post.frontmatter.banner != null && (
         <BannerWrapper>
-          <Img alt="Banner Image" sizes={post.frontmatter.banner.childImageSharp.sizes}/>
+          <Image
+            alt="Banner Image"
+            sizes={post.frontmatter.banner.childImageSharp.sizes}
+          />
         </BannerWrapper>
+      )}
+      <ContentWrapper>
+        <Title>{post.frontmatter.title}</Title>
+        <Date>{post.frontmatter.date}</Date>
 
-        <TitleWrapper>
-          <Title>{post.frontmatter.title}</Title>
-          <Date>{post.frontmatter.date}</Date>
-        </TitleWrapper>
-
-        <ContentWrapper>
-          <div dangerouslySetInnerHTML={{
-            __html: post.html
-          }}/>
-        </ContentWrapper>
-      </Grid>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: post.html,
+          }}
+        />
+      </ContentWrapper>
     </Container>
   )
 }
 
 export default Article
 
-export const query = graphql `
+export const query = graphql`
   query ArticleQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html

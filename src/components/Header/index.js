@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Brand, H4, Link, Subtitle } from '../Utils/text-styles'
-import { Line } from '../Utils/common-elements'
+import { Brand, H4, Link, Subtitle } from '../utils/text-styles'
+import { Line } from '../utils/common-elements'
 
 const Content = styled.div`
   width: 100%;

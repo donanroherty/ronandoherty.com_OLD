@@ -4,7 +4,7 @@ import GatsbyLink from 'gatsby-link'
 import PropTypes from 'prop-types'
 
 // Brand
-export const Brand = styled.h1`
+export const Brand = styled.h1 `
   font-family: ${props => props.theme.fontBrand};
   font-size: ${props => props.theme.brandSize};
   color: ${props => props.theme.color1};
@@ -17,7 +17,7 @@ export const Brand = styled.h1`
   user-select: none; /* Standard */
 `
 // Subtitle
-export const Subtitle = styled.h4`
+export const Subtitle = styled.h4 `
   font-family: ${props => props.theme.fontBrand};
   font-size: ${props => props.theme.subtitleSize};
   color: ${props => props.theme.colorLightText};
@@ -30,31 +30,31 @@ export const Subtitle = styled.h4`
   user-select: none; /* Standard */
 `
 // Page title
-export const H1 = styled.h1`
+export const H1 = styled.h1 `
   font-family: ${props => props.theme.fontSecondary};
   font-size: ${props => props.theme.h1Size};
   color: ${props => props.theme.color1};
   line-height: 1.2rem;
 `
 // Page section title
-export const H2 = styled.h2`
+export const H2 = styled.h2 `
   font-family: ${props => props.theme.fontBrand};
   font-size: ${props => props.theme.h2Size};
   color: ${props => props.theme.color1};
-  line-height: 1.2rem;
+  line-height: 1.4rem;
 `
 // Page minor title
-export const H3 = styled.h3`
+export const H3 = styled.h3 `
   font-family: ${props => props.theme.fontSecondary};
   font-size: ${props => props.theme.h3Size};
   color: ${props => props.theme.color1};
 `
 // Date
-export const H4 = styled.h4`
+export const H4 = styled.h4 `
   font-family: ${props => props.theme.fontPrimary};
   font-size: ${props => props.theme.h4Size};
-  color: ${props => props.theme.colorLightText};
-  ${'' /* line-height: 0.2rem; */};
+  color: ${props => props.theme.color};
+  line-height: 0.8rem;
   padding: 0;
   margin: 0;
 `
@@ -72,5 +72,7 @@ const LinkStyle = styled(GatsbyLink)`
   }
 `
 export const Link = props => (
-  <LinkStyle to={props.to}> {props.children} </LinkStyle>
+  <LinkStyle to={props.to}>
+    {props.children}
+  </LinkStyle>
 )
