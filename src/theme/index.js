@@ -17,8 +17,8 @@ export default {
   brandSize : '4rem',
   subtitleSize : '1.5rem',
   h1Size : '2rem',
-  h2Size : '1.5rem',
+  h2Size : '1rem',
   h3Size : '1rem',
   h4Size : '.8rem',
-  fontSize : '1rem'
+  fontSize : '.8rem'
 }

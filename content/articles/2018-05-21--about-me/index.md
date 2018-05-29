@@ -3,7 +3,8 @@ path: "/tutorials/about-me"
 date: "2018-05-21"
 title: "Hi"
 description: "A little about me"
-thumbnail: "./thumbnail.png"
+thumbnail: "./profile-image-16-9.png"
+published: true
 ---
 
 My names Ronan. I'm a recently graduated web developer based just outside Dublin, Ireland. My primary focus right now is on frontend development, I'm neck deep in Javascript and ReactJS these days and loving every minute of it.

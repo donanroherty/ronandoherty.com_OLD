@@ -1,31 +1,31 @@
 import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-import { H1, H2, H3, H4, Link } from '../components/utils/text-styles'
-import { Image } from '../components/utils/common-elements'
+import {H1, H2, H3, H4, Link} from '../components/utils/text-styles'
+import {Image} from '../components/utils/common-elements'
 
-const Container = styled.div`
+const Container = styled.div `
   font-family: ${props => props.theme.fontPrimary};
-  ${'' /* margin: 0 auto; */} width: 100%;
+  ${ ''/* margin: 0 auto; */} width: 100%;
 
   display: subgrid;
   background-color: ${props => props.theme.colorLightText};
-  ${'' /* color: ${props => props.theme.color}; */} ${'' /* padding: 2rem; */}
+  ${ ''/* color: ${props => props.theme.color}; */} ${ ''/* padding: 2rem; */}
   border-radius: 3px;
 `
-const Title = H1.extend`
+const Title = H1.extend `
   padding: 0;
   margin: 0;
   color: ${props => props.theme.color};
 `
-const Date = H4.extend`
+const Date = H4.extend `
   line-height: 2rem;
   margin: 0;
 `
-const BannerWrapper = styled.div`
+const BannerWrapper = styled.div `
   padding: 1rem;
 `
-const ContentWrapper = styled.div`
+const ContentWrapper = styled.div `
   padding: 3rem;
 `
 
@@ -38,19 +38,16 @@ const Article = props => {
         <BannerWrapper>
           <Image
             alt="Banner Image"
-            sizes={post.frontmatter.banner.childImageSharp.sizes}
-          />
+            sizes={post.frontmatter.banner.childImageSharp.sizes}/>
         </BannerWrapper>
       )}
       <ContentWrapper>
         <Title>{post.frontmatter.title}</Title>
         <Date>{post.frontmatter.date}</Date>
 
-        <div
-          dangerouslySetInnerHTML={{
-            __html: post.html,
-          }}
-        />
+        <div dangerouslySetInnerHTML={{
+          __html: post.html
+        }}/>
       </ContentWrapper>
     </Container>
   )
@@ -58,7 +55,7 @@ const Article = props => {
 
 export default Article
 
-export const query = graphql`
+export const query = graphql `
   query ArticleQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
@@ -71,6 +68,7 @@ export const query = graphql`
         title
         date(formatString: "DD MMMM, YYYY")
         description
+        published
         thumbnail {
           childImageSharp {
             sizes(maxWidth: 240) {
