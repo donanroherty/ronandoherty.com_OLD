@@ -14,4 +14,4 @@ While I'm digging through old projects to add to my shiny new website heres a pr
 
 This was an entry into a competition run by ThreeA, a high end toy manufacturer led by Ashley Woods. I put a tonne of work into this and learned loads along the way.
 
-The project was built and animated in 3dsMax, rendered with VRay, used FumeFX for the FX, modeled characters in Mudbox, composited in Nuke, made additional effects in Adobe After Effects, textures in Photoshop. Nothing feels better that a fluid pipeline through a bunch of specialized technologies.
+The project was built and animated in 3D Studio Max, rendered with VRay, used FumeFX for the FX, modeled characters in Mudbox, composited in Nuke, made additional effects in Adobe After Effects, textures in Photoshop. Nothing feels better that a fluid pipeline through a bunch of specialized technologies.
