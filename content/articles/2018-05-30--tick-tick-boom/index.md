@@ -1,6 +1,6 @@
 ---
 path: "/tutorials/tick-tick-boom"
-date: "2018-05-29"
+date: "2018-05-30"
 title: "Tick Tick Boom"
 description: "Unreal Engine winning game jam entry"
 thumbnail: "./tick-tick-boom-thumbnail.png"
