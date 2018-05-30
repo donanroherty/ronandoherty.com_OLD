@@ -10,7 +10,7 @@ export default {
 
   // fonts
   fontBrand : 'bungee',
-  fontPrimary : 'dosis',
+  fontPrimary : 'roboto',
   fontSecondary : 'dosis',
 
   // font sizes
