@@ -8,7 +8,7 @@ const Container = styled.div `
   font-family: ${props => props.theme.fontPrimary};
   ${ ''/* margin: 0 auto; */} width: 100%;
 
-  display: subgrid;
+
   background-color: ${props => props.theme.colorLightText};
   ${ ''/* color: ${props => props.theme.color}; */} ${ ''/* padding: 2rem; */}
   border-radius: 3px;

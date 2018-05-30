@@ -29,7 +29,8 @@ const IndexPage = props => {
           thumbnail: node.frontmatter.thumbnail.childImageSharp.sizes,
           banner: node.frontmatter.thumbnail.childImageSharp.sizes
         }}
-          key={node.id}/>))}
+          key={node.id}/>))
+        .reverse()}
     </Content>
   )
 }
