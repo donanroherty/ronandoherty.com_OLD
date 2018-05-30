@@ -5,6 +5,7 @@
   "author": "Ronan Doherty <donanroherty@gmail.com>",
   "dependencies": {
     "gatsby": "^1.9.247",
+    "gatsby-cli": "^1.1.52",
     "gatsby-image": "^1.0.43",
     "gatsby-link": "^1.6.40",
     "gatsby-module-loader": "^1.0.11",
