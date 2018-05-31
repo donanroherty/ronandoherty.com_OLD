@@ -1,5 +1,5 @@
 ---
-path: "/tutorials/about-me"
+path: "/about-me"
 date: "2018-05-21"
 title: "Hi"
 description: "A little about me"

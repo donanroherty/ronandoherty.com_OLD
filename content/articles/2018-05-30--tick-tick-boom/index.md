@@ -1,5 +1,5 @@
 ---
-path: "/tutorials/tick-tick-boom"
+path: "/tick-tick-boom"
 date: "2018-05-30"
 title: "Tick Tick Boom"
 description: "Unreal Engine winning game jam entry"

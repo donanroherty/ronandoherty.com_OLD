@@ -1,5 +1,5 @@
 ---
-path: "/tutorials/tick-tick-boom"
+path: "/three-a-comp"
 date: "2018-05-28"
 title: "ThreeA Animation competition winner"
 description: "An animation competition entry I made many moons ago"
