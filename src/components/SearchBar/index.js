@@ -10,14 +10,21 @@ const Container = styled.div `
   line-height: 0;
   text-align: right;
 `
-const SearchBar = props => {
+const SearchBar = (props, {location}) => {
   const iconSize = 30
+
+  console.log(location)
+
   return (
     <Container>
+
       {/* <Link to="/" type="icon">
         <Icon icon="filter" size={iconSize} />
       </Link> */}
-      <div/>
+      <Link to="/" type="icon">
+        <Icon icon="arrow" size={iconSize}/>
+      </Link>
+
       <div/>
       <Link to="/about-me" type="icon">
         <Icon icon="info" size={iconSize}/>
