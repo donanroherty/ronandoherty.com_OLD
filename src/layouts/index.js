@@ -24,7 +24,6 @@ radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
 radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
 background-color:#282828;
 background-size:16px 16px;
-
 /*
 background-image: repeating-linear-gradient(transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
 repeating-linear-gradient(270deg, transparent, transparent 50px, rgba(0,0,0,.8) 50px, rgba(0,0,0,.8) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
@@ -38,10 +37,6 @@ const Container = styled.div `
   color: ${props => props.theme.color};
   font-size: ${props => props.theme.fontSize};
   font-family: ${props => props.theme.fontPrimary};
-
-
-
-
 `
 const Grid = styled.div `
   display: grid;
@@ -54,7 +49,7 @@ const Grid = styled.div `
 `
 const ContentWrapper = styled.div ``
 
-const TemplateWrapper = ({children, data}) => (
+const TemplateWrapper = ({children, data, location}) => (
   <ThemeProvider theme={theme}>
     <Container>
       <Helmet
@@ -70,7 +65,7 @@ const TemplateWrapper = ({children, data}) => (
       ]}/>
       <Grid>
         <Header siteMetadata={data.site.siteMetadata} headerData={data.headerData}/>
-        <SearchBar/>
+        <SearchBar location={location}/>
         <ContentWrapper>{children()}</ContentWrapper>
 
         {/* <Footer siteMetadata={data.site.siteMetadata} profileImage={data.profileImage}/> */}
