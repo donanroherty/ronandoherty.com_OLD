@@ -1,6 +1,6 @@
 ---
 path: "/tutorials/tick-tick-boom"
-date: "2018-05-29"
+date: "2018-05-28"
 title: "ThreeA Animation competition winner"
 description: "An animation competition entry I made many moons ago"
 thumbnail: "./three-a-comp-banner.png"

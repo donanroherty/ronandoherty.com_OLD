@@ -12,25 +12,35 @@ const Content = styled.div `
 `
 
 const IndexPage = props => {
+  const getArticleList = () => {
+
+    const data = props
+      .data
+      .allMarkdownRemark
+      .edges
+      .map(({node}) => (node))
+
+    const sortedData = [...data].sort((a, b) => new Date(a.frontmatter.date) < new Date(b.frontmatter.date))
+
+    const nodeData = sortedData.map((node) => (<ArticleListing
+      articleData={{
+      id: node.id,
+      title: node.frontmatter.title,
+      date: node.frontmatter.date,
+      description: node.frontmatter.description,
+      excerpt: node.excerpt,
+      slug: node.fields.slug,
+      thumbnail: node.frontmatter.thumbnail.childImageSharp.sizes,
+      banner: node.frontmatter.thumbnail.childImageSharp.sizes
+    }}
+      key={node.id}/>))
+
+    return nodeData
+  }
+
   return (
     <Content>
-      {props
-        .data
-        .allMarkdownRemark
-        .edges
-        .map(({node}) => (<ArticleListing
-          articleData={{
-          id: node.id,
-          title: node.frontmatter.title,
-          date: node.frontmatter.date,
-          description: node.frontmatter.description,
-          excerpt: node.excerpt,
-          slug: node.fields.slug,
-          thumbnail: node.frontmatter.thumbnail.childImageSharp.sizes,
-          banner: node.frontmatter.thumbnail.childImageSharp.sizes
-        }}
-          key={node.id}/>))
-        .reverse()}
+      {getArticleList()}
     </Content>
   )
 }

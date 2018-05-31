@@ -9,7 +9,7 @@ export default {
   warning : 'red',
 
   // fonts
-  fontBrand : 'bungee',
+  fontBrand : 'montserrat',
   fontPrimary : 'roboto',
   fontSecondary : 'dosis',
 

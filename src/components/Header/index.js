@@ -7,16 +7,19 @@ const Content = styled.div `
   width: 100%;
   text-align: right;
   margin-left: auto;
-  max-width: 500px;
+  max-width: 370px;
+
+  display:grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  grid-gap: 16px;
 `
 
 const Header = props => {
   return (
     <Content>
       <Link to="/">
-
         <Brand>{props.siteMetadata.title}</Brand>
-
       </Link>
 
       <Subtitle>{`${props.siteMetadata.tagline}`}</Subtitle>

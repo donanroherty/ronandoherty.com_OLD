@@ -56,7 +56,15 @@ module.exports = {
     }, {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
-        fonts: ['roboto', 'dosis', 'rubik', 'bungee']
+        fonts: [
+          'roboto',
+          'dosis',
+          'rubik',
+          'bungee',
+          'Bowlby One SC',
+          'Proza Libre',
+          'montserrat\:800'
+        ]
       }
     }
   ]

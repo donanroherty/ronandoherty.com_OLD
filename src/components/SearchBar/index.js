@@ -1,25 +1,26 @@
-import React, { Component } from 'react'
-import { Link } from '../utils/text-styles'
+import React, {Component} from 'react'
+import {Link} from '../utils/text-styles'
 import Icon from '../utils/icon'
 import styled from 'styled-components'
 
-const Container = styled.div`
+const Container = styled.div `
   display: grid;
-  ${'' /* grid-template-rows: auto; */} grid-template-columns: auto 1fr auto;
+  ${ ''/* grid-template-rows: auto; */} grid-template-columns: auto 1fr auto;
   grid-gap: 10px;
   line-height: 0;
   text-align: right;
 `
 const SearchBar = props => {
-  const iconSize = 24
+  const iconSize = 30
   return (
     <Container>
-      <Link to="/" type="icon">
+      {/* <Link to="/" type="icon">
         <Icon icon="filter" size={iconSize} />
-      </Link>
-      <div />
+      </Link> */}
+      <div/>
+      <div/>
       <Link to="/about-me" type="icon">
-        <Icon icon="info" size={iconSize} />
+        <Icon icon="info" size={iconSize}/>
       </Link>
     </Container>
   )

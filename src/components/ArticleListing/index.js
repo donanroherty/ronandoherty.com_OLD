@@ -43,7 +43,6 @@ grid-row: 1 / 1;
 grid-column: 1 / 1;
 z-index: 20;
 filter: sepia(100%) saturate(100%) brightness(100%) hue-rotate(170deg);
-
 `
 
 const PostInfoContainer = styled.div `
@@ -62,8 +61,8 @@ const ArticleListing = props => (
 
     <GatsbyLink to={props.articleData.slug}>
       <ThumbnailContainer>
-        <ThumbnailTinted>{props.articleData.thumbnail !== null && <Image alt="Thumbnail Image" sizes={props.articleData.thumbnail}/>}</ThumbnailTinted>
-        <ThumbnailNatural>{props.articleData.thumbnail !== null && <Image alt="Thumbnail Image" sizes={props.articleData.thumbnail}/>}</ThumbnailNatural>
+        <ThumbnailTinted>{props.articleData.thumbnail !== null && <Image sizes={props.articleData.thumbnail}/>}</ThumbnailTinted>
+        <ThumbnailNatural>{props.articleData.thumbnail !== null && <Image sizes={props.articleData.thumbnail}/>}</ThumbnailNatural>
       </ThumbnailContainer>
     </GatsbyLink>
 
