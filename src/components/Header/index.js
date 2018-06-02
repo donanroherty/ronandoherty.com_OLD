@@ -1,7 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { H4, Link } from '../utils/text-styles'
-import { Line } from '../utils/common-elements'
+import { Line, H4, Link } from '../Utils/common-elements'
 import { media } from '../../utils/style-utils'
 
 const Content = styled.div`

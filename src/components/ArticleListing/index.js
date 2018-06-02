@@ -1,8 +1,7 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
-import { H2, H4, Link } from '../utils/text-styles'
-import { Image } from '../utils/common-elements'
+import { Image, H2, H4, Link } from '../Utils/common-elements'
 import GatsbyLink from 'gatsby-link'
 import { media } from '../../utils/style-utils'
 

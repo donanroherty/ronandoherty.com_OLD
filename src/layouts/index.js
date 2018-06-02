@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 import SearchBar from '../components/SearchBar'
 import styled, { ThemeProvider, injectGlobal } from 'styled-components'
 import Img from 'gatsby-image'
-import { Icon } from '../components/utils/common-elements'
+import { Icon } from '../components/Utils/common-elements'
 import theme from '../theme'
 import { media } from '../utils/style-utils'
 
@@ -19,12 +19,12 @@ injectGlobal`
     background-color: ${theme.backgroundColor};
 
     background:
-radial-gradient(black 15%, transparent 16%) 0 0,
-radial-gradient(black 15%, transparent 16%) 8px 8px,
-radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-background-color:#282828;
-background-size:16px 16px;
+      radial-gradient(black 15%, transparent 16%) 0 0,
+      radial-gradient(black 15%, transparent 16%) 8px 8px,
+      radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+      radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+      background-color:#282828;
+      background-size:16px 16px;
 }
 `
 const Container = styled.div`

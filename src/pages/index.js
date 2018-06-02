@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 import ArticleListing from '../components/ArticleListing'
 import Img from 'gatsby-image'
-import { H4 } from '../components/utils/text-styles'
+import { H4 } from '../components/Utils/common-elements'
 import PropTypes from 'prop-types'
 
 const Content = styled.div`

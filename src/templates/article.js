@@ -1,8 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-import { H1, H2, H3, H4, Link } from '../components/utils/text-styles'
-import { Image } from '../components/utils/common-elements'
+import {
+  Image,
+  H1,
+  H2,
+  H3,
+  H4,
+  Link,
+} from '../components/Utils/common-elements'
 import { media } from '../utils/style-utils'
 
 const Container = styled.div`

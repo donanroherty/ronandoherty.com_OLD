@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Link, ExternalLink } from '../utils/text-styles'
-import Icon from '../utils/icon'
+import { Link, ExternalLink } from '../Utils/common-elements'
+import Icon from '../Utils/icon'
 import styled from 'styled-components'
 
 const Container = styled.div`
