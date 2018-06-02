@@ -27,6 +27,11 @@ const Title = styled.div`
   font-size: ${props => props.theme.h2Size};
   color: ${props => props.theme.color1};
   line-height: 1.4rem;
+  ${media.phablet`
+  font-size: ${props => props.theme.h4Size}
+  line-height: 1rem;
+  `};
+  ${media.phone`font-size: ${props => props.theme.h4Size}`};
 `
 const Description = styled.div`
   font-size: ${props => props.theme.fontSize};
@@ -46,7 +51,6 @@ const ThumbnailContainer = styled.div`
   width: 100%;
   `};
 `
-
 const ThumbnailNatural = styled.div`
   grid-row: 1 / 1;
   grid-column: 1 / 1;
@@ -63,7 +67,6 @@ const ThumbnailTinted = styled.div`
   z-index: 20;
   filter: sepia(100%) saturate(100%) brightness(100%) hue-rotate(170deg);
 `
-
 const PostInfoContainer = styled.div`
   max-height: 150px;
   display: grid;

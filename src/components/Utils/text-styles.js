@@ -34,7 +34,7 @@ export const H4 = styled.h4`
 `
 
 // Links
-const LinkStyle = styled(GatsbyLink)`
+const StyleLink = styled.div`
   text-decoration: none;
   fill: ${props => props.theme.color2} !important;
   color: ${props => props.theme.color2} !important;
@@ -45,23 +45,19 @@ const LinkStyle = styled(GatsbyLink)`
     filter: brightness(120%);
   }
 `
+
 export const Link = props => (
-  <LinkStyle to={props.to}>{props.children}</LinkStyle>
+  <StyleLink>
+    <GatsbyLink style={{ textDecoration: 'none' }} to={props.to}>
+      {props.children}
+    </GatsbyLink>
+  </StyleLink>
 )
 
-const ExternalLinkStyle = styled.a`
-  text-decoration: none;
-  fill: ${props => props.theme.color2} !important;
-  color: ${props => props.theme.color2} !important;
-  > * {
-    color: ${props => props.theme.color1} !important;
-  }
-  :hover {
-    filter: brightness(120%);
-  }
-`
 export const ExternalLink = props => (
-  <ExternalLinkStyle {...props} href={props.to}>
-    {props.children}
-  </ExternalLinkStyle>
+  <StyleLink>
+    <a style={{ textDecoration: 'none' }} {...props} href={props.to}>
+      {props.children}
+    </a>
+  </StyleLink>
 )

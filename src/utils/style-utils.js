@@ -4,9 +4,9 @@ const sizes = {
   giant: 1170,
   desktop: 992,
   tablet: 768,
-  // phablet: 550,
-  // phone: 376,
+  phablet: 550,
   phone: 414,
+  // tiny: 376,
 }
 
 // iterate through the sizes and create a media template
