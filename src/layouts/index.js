@@ -41,11 +41,11 @@ const Grid = styled.div`
   grid-gap: 1.5rem;
   grid-template-rows: auto auto 1fr;
   margin: auto;
-  padding: 0 20px;
-  ${media.desktop`padding: 0 20px;`}
+  padding: 0 40px;
+  ${media.desktop`padding: 0 40px;`}
   ${media.tablet`
   grid-gap: 1rem;
-  padding: 0 10px;
+  padding: 0 40px;
   `}
   ${media.phone`padding: 0 10px;`}
 `
