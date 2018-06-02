@@ -43,8 +43,11 @@ const Grid = styled.div`
   margin: auto;
   padding: 0 20px;
   ${media.desktop`padding: 0 20px;`}
-  ${media.tablet`padding: 0 10px;`}
-  ${media.phone`padding: 0 5px;`}
+  ${media.tablet`
+  grid-gap: 1rem;
+  padding: 0 10px;
+  `}
+  ${media.phone`padding: 0 10px;`}
 `
 const ContentWrapper = styled.div``
 

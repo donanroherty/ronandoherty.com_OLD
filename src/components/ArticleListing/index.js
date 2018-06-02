@@ -7,7 +7,7 @@ import GatsbyLink from 'gatsby-link'
 import { media } from '../../utils/style-utils'
 
 const Container = styled.div`
-  ${'' /* max-height: 150px; */} max-width: 550px;
+  max-width: 550px;
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: auto 1fr;
