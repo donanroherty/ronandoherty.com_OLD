@@ -4,6 +4,7 @@ date: "2018-05-29"
 title: "Oni Kira: Demon Killer"
 description: "A game I helped build at BatCat games in 2014/2015"
 thumbnail: "./oni-kira-tn.jpg"
+banner: "./oni-kira-tn.jpg"
 published: true
 ---
 
