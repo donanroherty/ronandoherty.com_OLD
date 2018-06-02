@@ -30,18 +30,6 @@ const theme: OptionsType = {
     'h1,h2,h3,h4,h5,h6': {
       lineHeight: 1.1,
     },
-    // h1: {
-    //   fontSize: 2,
-    // },
-    // h2: {
-    //   fontSize: 2,
-    // },
-    // h3: {
-    //   fontSize: 2,
-    // },
-    // h4: {
-    //   fontSize: 0.8,
-    // },
     a: {
       color: '#ff5700',
       textDecoration: 'none',
