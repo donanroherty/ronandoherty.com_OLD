@@ -12,7 +12,7 @@ const Container = styled.div`
 `
 const SearchBar = props => {
   const iconSize = 30
-  console.log(props.location.pathname)
+
   return (
     <Container>
       {/* <Link to="/" type="icon">
@@ -31,7 +31,7 @@ const SearchBar = props => {
       {props.location.pathname !== '/' ? (
         <div />
       ) : (
-        <Link to="/about-me" type="icon">
+        <Link to="/blog/about-me" type="icon">
           <Icon icon="info" size={iconSize} />
         </Link>
       )}

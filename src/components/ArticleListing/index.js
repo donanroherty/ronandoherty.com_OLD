@@ -1,79 +1,104 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
-import {H2, H4, Link} from '../utils/text-styles'
-import {Image} from '../utils/common-elements'
+import { H2, H4, Link } from '../utils/text-styles'
+import { Image } from '../utils/common-elements'
 import GatsbyLink from 'gatsby-link'
+import { media } from '../../utils/style-utils'
 
-const Container = styled.div `
+const Container = styled.div`
+  ${'' /* max-height: 150px; */} max-width: 550px;
   display: grid;
-  grid-gap: 2rem;
+  grid-gap: 1rem;
   grid-template-columns: auto 1fr;
-  max-height: 150px;
-  max-width: 550px;
+  grid-template-rows: auto;
 
+  ${media.phone`
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr;
+  grid-gap: 0.4rem;
+  margin: auto;
+  width: 100%;
+  `};
 `
-const Title = H2.extend `
+const Title = styled.div`
   margin-top: 0;
+  font-family: ${props => props.theme.fontBrand};
+  font-size: ${props => props.theme.h2Size};
+  color: ${props => props.theme.color1};
+  line-height: 1.4rem;
 `
-const Description = styled.div `
+const Description = styled.div`
   font-size: ${props => props.theme.fontSize};
   color: ${props => props.theme.colorLightText};
+
+  ${'' /* width: 250px; */} overflow: hidden;
+  text-overflow: ellipsis;
 `
-const ThumbnailContainer = styled.div `
+const ThumbnailContainer = styled.div`
   width: 240px;
-  height: 150px;
+
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr; 
+  grid-template-rows: 1fr;
+
+  ${media.phone`
+  width: 100%;
+  `};
 `
 
-const ThumbnailNatural = styled.div `
-grid-row: 1 / 1;
-grid-column: 1 / 1;
-z-index: 20;
-filter: saturate(80%) brightness(100%);
-transition: opacity 200ms ease;
+const ThumbnailNatural = styled.div`
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+  z-index: 20;
+  filter: saturate(80%) brightness(100%);
+  transition: opacity 200ms ease;
   :hover {
     opacity: 0;
   }
 `
-const ThumbnailTinted = styled.div `
-grid-row: 1 / 1;
-grid-column: 1 / 1;
-z-index: 20;
-filter: sepia(100%) saturate(100%) brightness(100%) hue-rotate(170deg);
+const ThumbnailTinted = styled.div`
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+  z-index: 20;
+  filter: sepia(100%) saturate(100%) brightness(100%) hue-rotate(170deg);
 `
 
-const PostInfoContainer = styled.div `
+const PostInfoContainer = styled.div`
   max-height: 150px;
   display: grid;
   grid-template-rows: auto auto 1fr;
-  overflow: hidden;
-  ${ ''/* width: 300px; */}
 `
-const DateText = H4.extend `
+const DateText = styled.div`
   color: ${props => props.theme.colorLightText};
+  font-size: 0.6rem;
+  font-weight: bold;
 `
 
 const ArticleListing = props => (
   <Container>
-
-    <GatsbyLink to={props.articleData.slug}>
+    <GatsbyLink to={`blog${props.articleData.slug}`}>
       <ThumbnailContainer>
-        <ThumbnailTinted>{props.articleData.thumbnail !== null && <Image sizes={props.articleData.thumbnail}/>}</ThumbnailTinted>
-        <ThumbnailNatural>{props.articleData.thumbnail !== null && <Image sizes={props.articleData.thumbnail}/>}</ThumbnailNatural>
+        <ThumbnailTinted>
+          {props.articleData.thumbnail !== null && (
+            <Image sizes={props.articleData.thumbnail} />
+          )}
+        </ThumbnailTinted>
+        <ThumbnailNatural>
+          {props.articleData.thumbnail !== null && (
+            <Image sizes={props.articleData.thumbnail} />
+          )}
+        </ThumbnailNatural>
       </ThumbnailContainer>
     </GatsbyLink>
 
     <PostInfoContainer>
-      <Link to={props.articleData.slug}>
+      <Link to={`blog${props.articleData.slug}`}>
         <Title>{props.articleData.title}</Title>
       </Link>
       <DateText>{props.articleData.date}</DateText>
-      <Description>{props.articleData.description}</Description>
+      {/* <Description>{props.articleData.description}</Description> */}
     </PostInfoContainer>
-
   </Container>
 )
 
