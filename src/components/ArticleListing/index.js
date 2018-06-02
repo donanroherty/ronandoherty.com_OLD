@@ -1,9 +1,9 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
-import { Image, H2, H4, Link } from '../Utils/common-elements'
+import { Image, Link } from '../Utils/common-elements'
 import GatsbyLink from 'gatsby-link'
-import { media } from '../../utils/style-utils'
+import { media } from '../../utils/breakpoints'
 
 const Container = styled.div`
   max-width: 550px;
@@ -20,23 +20,23 @@ const Container = styled.div`
   width: 100%;
   `};
 `
-const Title = styled.div`
-  margin-top: 0;
-  font-family: ${props => props.theme.fontBrand};
-  font-size: ${props => props.theme.h2Size};
+const Title = styled.h4`
   color: ${props => props.theme.color1};
-  line-height: 1.4rem;
-  ${media.phablet`
-  font-size: ${props => props.theme.h4Size}
   line-height: 1rem;
+  margin-bottom: 0;
+  ${'' /* ${media.phablet`
+
   `};
-  ${media.phone`font-size: ${props => props.theme.h4Size}`};
+  ${media.phone`font-size: ${props => props.theme.h4Size}`}; */};
+`
+const DateText = styled.div`
+  color: ${props => props.theme.colorLightText};
+  font-size: 0.8rem;
+  font-weight: bold;
 `
 const Description = styled.div`
-  font-size: ${props => props.theme.fontSize};
   color: ${props => props.theme.colorLightText};
-
-  ${'' /* width: 250px; */} overflow: hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
 `
 const ThumbnailContainer = styled.div`
@@ -70,11 +70,6 @@ const PostInfoContainer = styled.div`
   max-height: 150px;
   display: grid;
   grid-template-rows: auto auto 1fr;
-`
-const DateText = styled.div`
-  color: ${props => props.theme.colorLightText};
-  font-size: 0.6rem;
-  font-weight: bold;
 `
 
 const ArticleListing = props => (

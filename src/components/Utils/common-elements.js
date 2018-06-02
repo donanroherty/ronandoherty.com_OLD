@@ -23,34 +23,34 @@ export const Image = styled(Img)`
 `
 
 // Page title
-export const H1 = styled.h1`
-  font-family: ${props => props.theme.fontSecondary};
-  font-size: ${props => props.theme.h1Size};
-  color: ${props => props.theme.color1};
-  line-height: 1.2rem;
-`
+// export const H1 = styled.h1`
+//   font-family: ${props => props.theme.fontSecondary};
+//   font-size: ${props => props.theme.h1Size};
+//   color: ${props => props.theme.color1};
+//   line-height: 1.2rem;
+// `
 // Page section title
-export const H2 = styled.h2`
-  font-family: ${props => props.theme.fontBrand};
-  font-size: ${props => props.theme.h2Size};
-  color: ${props => props.theme.color1};
-  line-height: 1.4rem;
-`
+// export const H2 = styled.h2`
+//   font-family: ${props => props.theme.fontBrand};
+//   font-size: ${props => props.theme.h2Size};
+//   color: ${props => props.theme.color1};
+//   line-height: 1.4rem;
+// `
 // Page minor title
-export const H3 = styled.h3`
-  font-family: ${props => props.theme.fontSecondary};
-  font-size: ${props => props.theme.h3Size};
-  color: ${props => props.theme.color1};
-`
+// export const H3 = styled.h3`
+//   font-family: ${props => props.theme.fontSecondary};
+//   font-size: ${props => props.theme.h3Size};
+//   color: ${props => props.theme.color1};
+// `
 // Date
-export const H4 = styled.h4`
-  font-family: ${props => props.theme.fontPrimary};
-  font-size: ${props => props.theme.h4Size};
-  color: ${props => props.theme.color};
-  line-height: 0.8rem;
-  padding: 0;
-  margin: 0;
-`
+// export const H4 = styled.h4`
+//   font-family: ${props => props.theme.fontPrimary};
+//   font-size: ${props => props.theme.h4Size};
+//   color: ${props => props.theme.color};
+//   line-height: 0.8rem;
+//   padding: 0;
+//   margin: 0;
+// `
 
 // Links
 const StyleLink = styled.div`

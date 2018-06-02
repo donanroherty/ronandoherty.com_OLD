@@ -2,13 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Header from '../components/Header'
-import Footer from '../components/Footer'
 import SearchBar from '../components/SearchBar'
 import styled, { ThemeProvider, injectGlobal } from 'styled-components'
 import Img from 'gatsby-image'
 import { Icon } from '../components/Utils/common-elements'
-import theme from '../theme'
-import { media } from '../utils/style-utils'
+import theme from '../utils/theme'
+import { media } from '../utils/breakpoints'
 
 injectGlobal`
   html, body, #___gatsby,  #___gatsby>div {
@@ -32,7 +31,7 @@ const Container = styled.div`
   height: 100%;
   color: ${props => props.theme.color};
   font-size: ${props => props.theme.fontSize};
-  font-family: ${props => props.theme.fontPrimary};
+  ${'' /* font-family: ${props => props.theme.fontPrimary}; */};
 `
 const Grid = styled.div`
   display: grid;

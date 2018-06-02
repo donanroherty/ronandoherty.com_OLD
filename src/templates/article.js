@@ -1,15 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-import {
-  Image,
-  H1,
-  H2,
-  H3,
-  H4,
-  Link,
-} from '../components/Utils/common-elements'
-import { media } from '../utils/style-utils'
+import { Image } from '../components/Utils/common-elements'
+import { media } from '../utils/breakpoints'
 
 const Container = styled.div`
   font-family: ${props => props.theme.fontPrimary};
@@ -19,17 +12,8 @@ const Container = styled.div`
   ${'' /* color: ${props => props.theme.color}; */} ${'' /* padding: 2rem; */}
   border-radius: 3px;
 `
-const Title = H1.extend`
-  padding: 0;
-  margin: 0;
-  color: ${props => props.theme.color};
-`
-const Date = H4.extend`
-  line-height: 2rem;
-  margin: 0;
-`
 const BannerWrapper = styled.div`
-  padding: 1rem;
+  ${'' /* padding: 1rem; */};
 `
 const ContentWrapper = styled.div`
   padding: 2.5rem;
@@ -53,8 +37,8 @@ const Article = props => {
         </BannerWrapper>
       )}
       <ContentWrapper>
-        <Title>{post.frontmatter.title}</Title>
-        <Date>{post.frontmatter.date}</Date>
+        <h1>{post.frontmatter.title}</h1>
+        <h4>{post.frontmatter.date}</h4>
 
         <div
           dangerouslySetInnerHTML={{

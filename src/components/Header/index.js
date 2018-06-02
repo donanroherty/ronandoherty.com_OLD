@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { Line, H4, Link } from '../Utils/common-elements'
-import { media } from '../../utils/style-utils'
+import { Line, Link } from '../Utils/common-elements'
+import { media } from '../../utils/breakpoints'
 
 const Content = styled.div`
   width: 100%;
@@ -15,7 +15,6 @@ const Content = styled.div`
   grid-gap: 16px;
 `
 const BaseText = styled.h4`
-  font-family: ${props => props.theme.fontBrand};
   font-size: 4rem;
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
@@ -24,13 +23,11 @@ const BaseText = styled.h4`
 `
 // Brand
 const Brand = BaseText.extend`
-  font-family: ${props => props.theme.fontBrand};
   font-size: 4rem;
   color: ${props => props.theme.color1};
   line-height: 3.2rem;
   margin-top: 1rem;
   margin-bottom: 0;
-  font-weight: 800;
 
   ${media.giant`font-size:4rem;`}
   ${media.desktop`font-size:4rem;`}
@@ -41,8 +38,7 @@ const Brand = BaseText.extend`
 
 // Subtitle
 const Subtitle = BaseText.extend`
-  font-family: ${props => props.theme.fontBrand};
-  font-size: ${props => props.theme.subtitleSize};
+  font-size: 1.5rem;
   color: ${props => props.theme.colorLightText};
   line-height: 1.2rem;
   padding: 0;
