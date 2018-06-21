@@ -4,6 +4,7 @@ date: "2018-06-21"
 title: "UE4 Dark Souls camera system"
 description: "A camera system I made in UE4, inspired by Dark Souls lock on camera system."
 thumbnail: "./dark-souls-tb.png"
+banner: "./dark-souls-tb.png"
 published: true
 ---
 
