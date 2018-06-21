@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import GatsbyLink from 'gatsby-link'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 // Horizontal Line
 export const Line = styled.hr`
@@ -46,8 +47,8 @@ export const Link = props => (
 
 export const ExternalLink = props => (
   <StyleLink>
-    <a style={{ textDecoration: 'none' }} {...props} href={props.to}>
+    <OutboundLink style={{ textDecoration: 'none' }} {...props} href={props.to}>
       {props.children}
-    </a>
+    </OutboundLink>
   </StyleLink>
 )

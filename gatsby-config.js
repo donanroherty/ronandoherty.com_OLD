@@ -12,6 +12,15 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-resolve-src`,
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-121200245-1',
+        head: false,
+        anonymize: false,
+        respectDNT: false,
+      },
+    },
+    {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
