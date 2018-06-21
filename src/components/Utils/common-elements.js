@@ -31,12 +31,6 @@ const StyleLink = styled.div`
     fill: ${props => props.theme.color2} !important;
     color: ${props => props.theme.color2} !important;
   }
-  :link {
-    color: ${props => props.theme.color2} !important;
-  }
-  :visited {
-    color: ${props => props.theme.color2} !important;
-  }
   :hover {
     filter: brightness(120%);
   }
