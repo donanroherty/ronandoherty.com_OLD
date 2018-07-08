@@ -2,14 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 import SearchBar from '../components/SearchBar'
-import styled, { ThemeProvider, injectGlobal } from 'styled-components'
+import styled, {ThemeProvider, injectGlobal} from 'styled-components'
 import Img from 'gatsby-image'
-import { Icon } from '../components/Utils/common-elements'
+import {Icon} from '../components/Utils/common-elements'
 import theme from '../utils/theme'
-import { media } from '../utils/breakpoints'
+import {media} from '../utils/breakpoints'
 
-injectGlobal`
+injectGlobal `
   html, body, #___gatsby,  #___gatsby>div {
     height:100vh;
     width: 100vw;
@@ -26,14 +27,14 @@ injectGlobal`
       background-size:16px 16px;
 }
 `
-const Container = styled.div`
+const Container = styled.div `
   margin: auto;
   height: 100%;
   color: ${props => props.theme.color};
   font-size: ${props => props.theme.fontSize};
-  ${'' /* font-family: ${props => props.theme.fontPrimary}; */};
+  ${ ''/* font-family: ${props => props.theme.fontPrimary}; */};
 `
-const Grid = styled.div`
+const Grid = styled.div `
   display: grid;
   min-height: 100%;
   max-width: 960px;
@@ -41,51 +42,47 @@ const Grid = styled.div`
   grid-template-rows: auto auto 1fr;
   margin: auto;
   padding: 0 40px;
-  ${media.desktop`padding: 0 40px;`}
-  ${media.tablet`
+  ${media.desktop `padding: 0 40px;`}
+  ${media.tablet `
   grid-gap: 1rem;
   padding: 0 40px;
   `}
-  ${media.phone`padding: 0 10px;`}
+  ${media.phone `padding: 0 10px;`}
 `
-const ContentWrapper = styled.div``
+const ContentWrapper = styled.div ``
 
-const TemplateWrapper = ({ children, data, location }) => (
+const TemplateWrapper = ({children, data, location}) => (
   <ThemeProvider theme={theme}>
     <Container>
       <Helmet
         title={data.site.siteMetadata.title}
         meta={[
-          {
-            name: 'description',
-            content: 'Sample',
-          },
-          {
-            name: 'keywords',
-            content: 'sample, something',
-          },
-        ]}
-      />
+        {
+          name: 'description',
+          content: 'Sample'
+        }, {
+          name: 'keywords',
+          content: 'sample, something'
+        }
+      ]}/>
       <Grid>
-        <Header
-          siteMetadata={data.site.siteMetadata}
-          headerData={data.headerData}
-        />
-        <SearchBar location={location} />
+        <Header siteMetadata={data.site.siteMetadata}/>
+        <SearchBar location={location}/>
         <ContentWrapper>{children()}</ContentWrapper>
+        <Footer siteMetadata={data.site.siteMetadata}/>
       </Grid>
     </Container>
   </ThemeProvider>
 )
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.func
 }
 
 export default TemplateWrapper
 
 //Query
-export const query = graphql`
+export const query = graphql `
   query ImageQuery {
     site {
       siteMetadata {
