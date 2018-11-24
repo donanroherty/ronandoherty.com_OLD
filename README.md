@@ -1,6 +1,6 @@
 # RonanDoherty.com
 
-This is the source code for my website.  The site is built in Gatsby, a React based static site generator.
+This is the source code for my website ronandoherty.com.  The site is built in Gatsby, a React based static site generator.
 
 ## Install
 
