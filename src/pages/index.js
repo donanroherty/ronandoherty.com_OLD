@@ -1,9 +1,6 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import styled from 'styled-components'
 import ArticleListing from '../components/ArticleListing'
-import Img from 'gatsby-image'
-import PropTypes from 'prop-types'
 
 const Content = styled.div`
   display: grid;

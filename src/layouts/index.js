@@ -5,8 +5,6 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import SearchBar from '../components/SearchBar'
 import styled, { ThemeProvider, injectGlobal } from 'styled-components'
-import Img from 'gatsby-image'
-import { Icon } from '../components/Utils/common-elements'
 import theme from '../utils/theme'
 import { media } from '../utils/breakpoints'
 
@@ -17,7 +15,6 @@ injectGlobal`
     padding: 0;
     margin:0;
     background-color: ${theme.backgroundColor};
-
 }
 `
 const Container = styled.div`
