@@ -1,26 +1,18 @@
-# gatsby-starter-default
-The default Gatsby starter.
+# RonanDoherty.com
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
+This is the source code for my website ronandoherty.com.  The site is built in Gatsby, a React based static site generator.
 
 ## Install
 
-Make sure that you have the Gatsby CLI program installed:
+Install gatsby:
 ```sh
+yarn global add gatsby-cli
+//  or
 npm install --global gatsby-cli
 ```
-
-And run from your CLI:
+CD into the project directory and start the development server:
 ```sh
-gatsby new gatsby-example-site
+cd ronandoherty.com
+yarn develop
 ```
-
-Then you can run it by:
-```sh
-cd gatsby-example-site
-npm run develop
-```
-
-## Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+The site will be available at http://localhost:8000/
