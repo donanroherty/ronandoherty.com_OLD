@@ -12,10 +12,8 @@ published: true
 
 Laniakea is an application for categorization and re-discovery of starred GitHub repositories. It aims to improve on GitHubs existing starred repository system by allowing users to tag repos with labels that make sense to them and the use these labels to filter their stars down to that one perfect repo when they need it.
 
-You can try out an early build here. It uses mock data, the Login With Github screen is placeholder.
+You can try out an early build here. It uses mock data, the Login With Github screen is placeholder. https://laniakea.netlify.com/
 
-https://laniakea.netlify.com/
+Source code: https://github.com/donanroherty/laniakea/
 
-Source code:
-
-https://github.com/donanroherty/laniakea/
+![alt text](App-component_desktop.png 'Logo Title Text 1')
