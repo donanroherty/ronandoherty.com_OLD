@@ -8,7 +8,7 @@ banner: "./thumbnail.png"
 published: true
 ---
 
-StarDaddy is a Chrome extension for management and re-discovery starred GitHub repositories. It syncs data locally, enabling lightning fast searching and filtering.
+StarDaddy is a Chrome extension for management and re-discovery of starred GitHub repositories. It syncs data locally, enabling lightning fast searching and filtering.
 
 StarDaddy uses a tag system to filter repositories. Detected repo languages are used as default tags, soon you will be able to create custom tags allowing for deep categorization.
 
