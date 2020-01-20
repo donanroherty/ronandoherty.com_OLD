@@ -5,7 +5,7 @@ export default {
   color2: '#FF6600',
   color3: '#616161',
   colorLightText: '#D6D6D6',
-  backgroundColor: '#070707',
+  backgroundColor: 'rgb(52,54,57)',
   warning: 'red',
 
   // font sizes
