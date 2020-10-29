@@ -7,8 +7,8 @@ thumbnail: "./me3.jpg"
 published: true
 ---
 
-My names Ronan. I'm a junior web developer based Kildare, Ireland. My primary focus right now is on frontend development, I spend a lot of time building web and mobile apps in React and React Native.
+My names Ronan, I'm a web developer based Kildare, Ireland.  I like to build useful applications using React, Unreal Engine and many other tools.
 
-Previously I've worked as a game developer for a small indie games studio and as a architectural 3D artist. I'm always looking to find a balance between the technical and the creative.
+Feel free to get in touch via LinkedIn or email me at ronandohertydev@gmail.com
 
-Thanks for visiting
+Thanks for visiting.

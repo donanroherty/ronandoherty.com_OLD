@@ -1,7 +1,7 @@
 ---
 path: "/beatdaddy"
 date: "2019-03-11"
-title: "BeatDaddy.net: A music practice tool built in React and Typescript"
+title: "BeatDaddy.net - A music practice tool built in React and Typescript"
 description: ""
 thumbnail: "./beatdaddy-thumbnail.png"
 banner: "./banner.png"

@@ -1,7 +1,7 @@
 ---
 path: "/tick-tick-boom"
 date: "2018-05-30"
-title: "Tick Tick Boom.  My UE4 game jam winning entry"
+title: "Tick Tick Boom - My UE4 game jam winning entry"
 description: "Unreal Engine winning game jam entry"
 thumbnail: "./ttb-tm.png"
 banner: "./ttb-tm.png"

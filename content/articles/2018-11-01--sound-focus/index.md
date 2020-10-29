@@ -1,7 +1,7 @@
 ---
 path: "/sound-focus"
 date: "2018-11-01"
-title: "SoundFocus: A work timer and ambient noise player for Android"
+title: "SoundFocus - A work timer and ambient noise player for Android"
 description: ""
 thumbnail: "./thumbnail.png"
 banner: "./banner.png"
