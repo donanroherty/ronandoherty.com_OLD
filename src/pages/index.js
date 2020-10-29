@@ -12,7 +12,9 @@ const IndexPage = props => {
     const data = props.data.allMarkdownRemark.edges.map(({ node }) => node)
 
     const sortedData = [...data].sort(
-      (a, b) => new Date(a.frontmatter.date) < new Date(b.frontmatter.date)
+      (a, b) =>
+        new Date(a.frontmatter.date).getTime() <
+        new Date(b.frontmatter.date).getTime()
     )
 
     const nodeData = sortedData.map(node => (

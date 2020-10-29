@@ -1,20 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
 import { Image } from '../components/Utils/common-elements'
 import { media } from '../utils/breakpoints'
 
 const Container = styled.div`
   font-family: ${props => props.theme.fontPrimary};
-  ${'' /* margin: 0 auto; */} width: 100%;
-
   background-color: ${props => props.theme.colorLightText};
-  ${'' /* color: ${props => props.theme.color}; */} ${'' /* padding: 2rem; */}
   border-radius: 3px;
 `
-const BannerWrapper = styled.div`
-  ${'' /* padding: 1rem; */};
-`
+const BannerWrapper = styled.div``
 const ContentWrapper = styled.div`
   padding: 2.5rem;
 
